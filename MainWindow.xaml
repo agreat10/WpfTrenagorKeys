@@ -1,0 +1,123 @@
+﻿<Window x:Class="WpfTrenagorKeys.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTrenagorKeys"
+        mc:Ignorable="d"
+        Title="Keyboard Trainer" Height="450" Width="905"
+        KeyDown="OnKeyDown" KeyUp="OnKeyUp" 
+        WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" BorderBrush="Black"  BorderThickness="2" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <SolidColorBrush x:Key="GrayButton" Color="Gray" Opacity="0.8"/>
+    </Window.Resources>
+    <Grid x:Name="GR">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="#FFDFF9C6" Orientation="Horizontal">
+            
+            <TextBlock  x:Name="textblock1" FontSize="18" FontWeight="Bold" Text="Количество ошибок: " Margin="5"  />
+            <TextBlock  x:Name="textblock2" FontSize="18" FontWeight="Bold" Foreground="Red" Margin="5"/>
+            <TextBlock  x:Name="textblock3" FontSize="18" FontWeight="Bold" Text="Количество правильных вводов: " Margin="5"  />
+            <TextBlock  x:Name="textblock4" FontSize="18" FontWeight="Bold" Foreground="LawnGreen" Margin="5"/>
+            
+            
+        </StackPanel>
+        <StackPanel Grid.Row="1" Background="#FFDCF7F6" >
+            <StackPanel  x:Name="SPstr" Orientation="Horizontal" />
+            <StackPanel  x:Name="SPstr1" Orientation="Horizontal" />
+        </StackPanel>
+        <StackPanel x:Name="Ttilda" Grid.Row="2" Orientation="Horizontal" >
+            <Button  x:Name="Oem3" Content="~" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"/>
+            <Button  x:Name="D1" Content="1" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"/>
+            <Button  x:Name="D2" Content="2" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"/>
+            <Button  x:Name="D3" Content="3" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}" />
+            <Button  x:Name="D4" Content="4" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"/>
+            <Button  x:Name="D5" Content="5" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"/>
+            <Button  x:Name="D6" Content="6" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"/>
+            <Button  x:Name="D7" Content="7" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"/>
+            <Button  x:Name="D8" Content="8" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"/>
+            <Button  x:Name="D9" Content="9" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"/>
+            <Button  x:Name="D0" Content="0" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}"/>
+            <Button  x:Name="OemMinus" Content="-" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"/>
+            <Button  x:Name="OemPlus" Content="=" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"/>
+            <Button  x:Name="Back" Content="Backcpace" Width="100" Margin="5" FontSize="20" Background="{StaticResource GrayButton}"/>            
+        </StackPanel>
+        <StackPanel x:Name="Ttab" Grid.Row="3" Orientation="Horizontal" >
+            <Button  x:Name="Tab" Content="Tab" Width="75" Margin="5" FontSize="20" Background="{StaticResource GrayButton}" />
+            <Button  x:Name="Q" Content="q" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"  />
+            <Button  x:Name="W" Content="w" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}" />
+            <Button  x:Name="E" Content="e" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"  />
+            <Button  x:Name="R" Content="r" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"  />
+            <Button  x:Name="T" Content="t" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}" />
+            <Button  x:Name="Y" Content="y" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"/>
+            <Button  x:Name="U" Content="u" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}" />
+            <Button  x:Name="I" Content="i" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"  />
+            <Button  x:Name="O" Content="o" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}"  />
+            <Button  x:Name="P" Content="p" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"  />
+            <Button  x:Name="OemOpenBrackets" Content="[" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"/>
+            <Button  x:Name="Oem6" Content="]" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}" />
+            <Button  x:Name="Oem5" Content="\" Width="75" Margin="5" FontSize="16" Background="{StaticResource GreenButton}"  />
+        </StackPanel>
+        <StackPanel Grid.Row="4" x:Name="Tcaps" Orientation="Horizontal" >
+            <Button  x:Name="Capital" Content="Caps Lock" Width="105" Margin="5" FontSize="20" Background="{StaticResource GrayButton}"  />
+            <Button  x:Name="A" Content="a" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"     />
+            <Button  x:Name="S" Content="s" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}"  />
+            <Button  x:Name="D" Content="d" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"   />
+            <Button  x:Name="F" Content="f" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"    />
+            <Button  x:Name="G" Content="g" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"    />
+            <Button  x:Name="H" Content="h" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"  />
+            <Button  x:Name="J" Content="j" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"  />
+            <Button  x:Name="K" Content="k" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"     />
+            <Button  x:Name="L" Content="l" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}"  />
+            <Button  x:Name="Oem1" Content=";" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"       />
+            <Button  x:Name="OemQuotes" Content="'" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"  />
+            <Button  x:Name="Return" Content="Enter" Width="105" Margin="5" FontSize="20" Background="{StaticResource GrayButton}" />            
+        </StackPanel>
+        <StackPanel x:Name="Tshift" Grid.Row="5" Orientation="Horizontal" >
+            <Button  x:Name="LeftShift" Content="Shift" Width="135" Margin="5" FontSize="20" Background="{StaticResource GrayButton}" />
+            <Button  x:Name="Z" Content="z" Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"               />
+            <Button  x:Name="X" Content="x" Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}"            />
+            <Button  x:Name="C" Content="c" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"             />
+            <Button  x:Name="V" Content="v" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"              />
+            <Button  x:Name="B" Content="b" Width="50" Margin="5" FontSize="32" Background="{StaticResource BlueButton}"              />
+            <Button  x:Name="N" Content="n" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"            />
+            <Button  x:Name="M" Content="m" Width="50" Margin="5" FontSize="32" Background="{StaticResource PurpurButton}"            />
+            <Button  x:Name="OemComma" Content="," Width="50" Margin="5" FontSize="32" Background="{StaticResource RedButton}"        />
+            <Button  x:Name="OemPeriod" Content="." Width="50" Margin="5" FontSize="32" Background="{StaticResource YellowButton}"    />
+            <Button  x:Name="OemQuestion" Content="/" Width="50" Margin="5" FontSize="32" Background="{StaticResource GreenButton}"   />
+            <Button  x:Name="RightShift" Content="Shift" Width="135" Margin="5" FontSize="20" Background="{StaticResource GrayButton}" />
+        </StackPanel>
+        <StackPanel x:Name="Tctrl" Grid.Row="6" Orientation="Horizontal" >
+            <Button  x:Name="LeftCtrl" Content="Ctrl" Width="75" Margin="5" FontSize="20"  Background="{StaticResource GrayButton}"/>
+            <Button  x:Name="LWin" Content="Win" Width="75" Margin="5" FontSize="20"  Background="{StaticResource GrayButton}" />
+            <Button   Content="Alt" Width="75" Margin="5" FontSize="20"  Background="{StaticResource GrayButton}"/>
+            <Button  x:Name="Space" Content="Space" Width="370" Margin="5" FontSize="20"   Background="#FFDD9D07"/>
+            <Button  Content="Alt" Width="75" Margin="5" FontSize="20"  Background="{StaticResource GrayButton}" />
+            <Button  Content="Win" Width="75" Margin="5" FontSize="20"  Background="{StaticResource GrayButton}"/>
+            <Button  x:Name="RightCtrl" Content="Ctrl" Width="75" Margin="5" FontSize="20"  Background="{StaticResource GrayButton}" />
+           
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

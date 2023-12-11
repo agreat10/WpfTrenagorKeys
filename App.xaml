@@ -1,0 +1,17 @@
+﻿<Application x:Class="WpfTrenagorKeys.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfTrenagorKeys"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        
+        
+        <SolidColorBrush x:Key="RedButton" Color="#FFF07795" Opacity="0.8"/>
+        <SolidColorBrush x:Key="YellowButton" Color="#FFE6F077" Opacity="0.8"/>
+        <SolidColorBrush x:Key="GreenButton" Color="#FF7FF077" Opacity="0.8"/>
+        <SolidColorBrush x:Key="BlueButton" Color="#FF77BEF0" Opacity="0.8"/>
+        <SolidColorBrush x:Key="PurpurButton" Color="#FFDB77F0" Opacity="0.8"/>
+        
+    </Application.Resources>
+</Application>
